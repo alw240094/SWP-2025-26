@@ -23,5 +23,5 @@ Deno.test("subTest", () => {
 });
 
 Deno.test("squarerootTest", () => {
-  assertEquals(squareroot(49), 7);
+  assertEquals(squareroot(49),7);
 });
