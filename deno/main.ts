@@ -1,24 +1,55 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+export class Bruch {
+  constructor(
+    public zaehler: number,
+    public nenner: number
+  ) {
+    if (nenner === 0) {
+      throw new Error("Nenner darf nicht 0 sein!");
+    }
+    this.kuerzen();
+  }
 
-export function multiply(a: number, b: number): number {
-  return a * b;
-}
+  // Kürzt den Bruch
+  private kuerzen() {
+    const g = this.ggt(Math.abs(this.zaehler), Math.abs(this.nenner));
+    this.zaehler /= g;
+    this.nenner /= g;
+    if (this.nenner < 0) { // negatives Vorzeichen immer im Zähler
+      this.zaehler *= -1;
+      this.nenner *= -1;
+    }
+  }
 
-export function divide(a: number, b: number): number {
-  return a / b;
-}
+  private ggt(a: number, b: number): number {
+    return b === 0 ? a : this.ggt(b, a % b);
+  }
 
-export function sub(a: number, b: number): number {
-  return a - b;
-}
+  add(b: Bruch): Bruch {
+    const z = this.zaehler * b.nenner + b.zaehler * this.nenner;
+    const n = this.nenner * b.nenner;
+    return new Bruch(z, n);
+  }
 
-export function squareroot(a: number): number {
-  return Math.sqrt(a);
-}
+  sub(b: Bruch): Bruch {
+    const z = this.zaehler * b.nenner - b.zaehler * this.nenner;
+    const n = this.nenner * b.nenner;
+    return new Bruch(z, n);
+  }
 
-// Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  console.log("Add 2 + 3 =",add(2,3));
+  mul(b: Bruch): Bruch {
+    return new Bruch(this.zaehler * b.zaehler, this.nenner * b.nenner);
+  }
+
+  div(b: Bruch): Bruch {
+    if (b.zaehler === 0) throw new Error("Division durch 0!");
+    return new Bruch(this.zaehler * b.nenner, this.nenner * b.zaehler);
+  }
+
+  toString(): string {
+    return `${this.zaehler}/${this.nenner}`;
+  }
+
+  equals(b: Bruch): boolean {
+    return this.zaehler === b.zaehler && this.nenner === b.nenner;
+  }
 }
