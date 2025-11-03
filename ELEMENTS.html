@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Beispiel: 20 HTML-Elemente</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 16px; line-height:1.4; }
+    header, footer { background:#f0f0f0; padding:8px; }
+    nav ul { display:flex; gap:8px; list-style:none; padding:0; margin:0; }
+    figure { max-width:220px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demo mit vielen HTML-Elementen</h1>
+    <nav>
+      <ul>
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="section1">
+      <article>
+        <h2>Artikelüberschrift</h2>
+        <p>Dies ist ein <strong>fett</strong> und <em>kursiver</em> Text in einem Absatz.</p>
+        <figure>
+          <img src="https://via.placeholder.com/200" alt="Platzhalterbild">
+          <figcaption>Beispielbild</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="section2">
+      <h2>Liste und Tabelle</h2>
+      <ul>
+        <li>Erstes Element</li>
+        <li>Zweites Element</li>
+        <li>Drittes Element</li>
+      </ul>
+
+      <table border="1" cellpadding="4">
+        <thead>
+          <tr><th>Nr</th><th>Name</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Alice</td></tr>
+          <tr><td>2</td><td>Bob</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontaktformular</h2>
+      <form onsubmit="event.preventDefault(); document.getElementById('msg').textContent = 'Gesendet!';">
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" placeholder="Dein Name">
+        <br><br>
+        <label for="email">E‑Mail:</label>
+        <input id="email" name="email" type="email" placeholder="mail@example.com">
+        <br><br>
+        <button type="submit">Absenden</button>
+      </form>
+      <p id="msg" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <aside>
+    <p>Kleiner Hinweis im Aside.</p>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 Beispielseite</p>
+  </footer>
+
+  <script>
+    // Ein kleines Script-Element
+    console.log('Seite geladen');
+  </script>
+</body>
+</html>
