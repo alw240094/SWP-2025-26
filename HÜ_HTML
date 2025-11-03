@@ -1,0 +1,56 @@
+HTML (Hypertext Markup Language) ist die grundlegende Sprache des World Wide Web. Sie dient dazu, Inhalte auf Webseiten zu strukturieren und darzustellen. Im Zentrum von HTML stehen die HTML-Elemente, die als die Bausteine einer Webseite betrachtet werden können. Jedes HTML-Element besteht normalerweise aus einem Tag, optionalen Attributen und einem Inhalt.
+
+Ein HTML-Element wird meist durch ein Start-Tag und ein End-Tag dargestellt, zwischen denen der Inhalt platziert wird. Ein einfaches Beispiel ist der Absatz-Tag <p>, der einen Textabsatz kennzeichnet: <p>Dies ist ein Absatz.</p>. Hierbei ist <p> der Start-Tag, </p> der End-Tag und "Dies ist ein Absatz" der Inhalt. Manche HTML-Elemente sind selbstschließend, wie zum Beispiel <img> für Bilder oder <br> für Zeilenumbrüche, die keinen separaten End-Tag benötigen.
+
+HTML-Elemente lassen sich nach ihrer Funktion einteilen. Strukturelle Elemente dienen dazu, die Gliederung der Webseite festzulegen. Dazu zählen <header> für den Kopfbereich, <footer> für den Fußbereich, <nav> für Navigationsleisten, <section> für inhaltliche Abschnitte und <article> für eigenständige Inhalte. Durch die Verwendung dieser Elemente wird nicht nur die visuelle Struktur einer Seite klar, sondern auch die Bedeutung des Inhalts, was besonders für Suchmaschinen und Screenreader wichtig ist.
+
+Neben der Strukturierung gibt es Textformatierungselemente, die das Aussehen und die Hervorhebung von Text beeinflussen. Beispiele sind <strong> für wichtige Hervorhebungen, <em> für Betonungen, <h1> bis <h6> für Überschriften verschiedener Ebenen und <blockquote> für längere Zitate. Außerdem können Listen erstellt werden, entweder ungeordnet mit <ul> und <li> oder geordnet mit <ol> und <li>.
+
+Ein weiterer wichtiger Typ sind interaktive Elemente, die es ermöglichen, dass Nutzer mit der Webseite interagieren. Dazu gehören <a> für Hyperlinks, <button> für Schaltflächen und Formularelemente wie <input>, <textarea> oder <select>. Diese Elemente können zusätzlich mit Attributen wie id, class, name, href oder src versehen werden, um ihr Verhalten oder ihre Darstellung zu steuern.
+
+HTML-Elemente sind außerdem verschachtelbar, das heißt, ein Element kann innerhalb eines anderen stehen. So kann ein Absatz <p> beispielsweise innerhalb eines Abschnitts <section> stehen, oder ein Link <a> innerhalb einer Überschrift <h2>. Diese Verschachtelung ist wichtig für eine logische und saubere Struktur von Webseiten.
+
+Die Semantik von HTML-Elementen spielt eine große Rolle. Sie beschreibt die Bedeutung des Inhalts für den Browser und andere Nutzer. Ein <strong>-Element signalisiert zum Beispiel inhaltliche Wichtigkeit, während ein <b>-Element nur die visuelle Hervorhebung übernimmt, ohne eine inhaltliche Aussage. Moderne Webentwicklung legt großen Wert auf semantisches HTML, da dies die Zugänglichkeit, die Suchmaschinenoptimierung und die Wartbarkeit verbessert.
+
+HTML-Elemente bilden zusammen mit CSS und JavaScript die Grundlage jeder Webseite. Während HTML die Struktur vorgibt, sorgt CSS für das Design und die visuelle Gestaltung, und JavaScript für Interaktivität und dynamisches Verhalten. Das Zusammenspiel dieser Technologien ermöglicht es, Webseiten sowohl funktional als auch ansprechend zu gestalten.
+
+Zusammenfassend sind HTML-Elemente die fundamentalen Bausteine des Webs. Sie definieren Struktur, Semantik und Inhalt von Webseiten. Ein gutes Verständnis von HTML-Elementen ist für Webentwickler unerlässlich, da nur durch korrektes Markup eine Webseite übersichtlich, zugänglich und suchmaschinenfreundlich gestaltet werden kann.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
