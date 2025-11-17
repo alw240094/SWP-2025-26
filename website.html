@@ -1,0 +1,95 @@
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sami Alwazeh — Fußball & interessante Themen</title>
+  <style>
+    :root{
+      --card-w: 260px;
+      --accent:rgb(193, 36, 36);
+    }
+    body{font-family:Arial,Helvetica,sans-serif;margin:24px;background:#f7f9fb;color:#123}
+    .container{display:flex;gap:20px;flex-wrap:wrap}
+    .card{
+      width:var(--card-w);
+      background:#fff;
+      margin:12px;
+      padding:16px;
+      border:4px solid #e0e6ea;
+      border-radius:8px;
+      box-shadow:0 6px 14px rgba(18,34,51,0.06);
+      box-sizing:border-box;
+      transition:transform .18s, box-shadow .18s;
+    }
+    .card:hover{transform:translateY(-6px); box-shadow:0 12px 30px rgba(18,34,51,0.12);}
+    .box{height:64px;background:linear-gradient(90deg,#eef,#cfe);display:flex;align-items:center;justify-content:center}
+    .row{display:flex;gap:10px;align-items:center}
+    .badge{padding:6px 10px;border:2px dashed var(--accent);margin-right:6px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+    .cell{background:#f0fbf7;padding:8px;border:1px solid #dff; text-align:center}
+    footer{margin-top:24px;font-size:0.9rem;color:#456}
+    small{color:#567}
+    .note{outline:2px dotted #f90;padding:6px;margin-top:8px}
+    header .author{font-size:0.95rem;color:#345;margin-top:6px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fußball & interessante Themen</h1>
+    <div class="author">Von Sami Alwazeh</div>
+  </header>
+
+  <div class="container">
+    <section class="card" aria-label="Fußball Taktik">
+      <h2>Taktik & Formationen</h2>
+      <p>Grundlagen zu Formationen (4-4-2, 4-3-3, 3-5-2) und wie Pressing, Raumaufteilung und Rollen das Spiel beeinflussen.</p>
+      <div class="box">Pressing • Umschaltspiel • Dominanz</div>
+      <div class="row">
+        <span class="badge">Taktik</span>
+        <small>Analyse und Beispiele</small>
+      </div>
+    </section>
+
+    <section class="card" aria-label="Spieler">
+      <h2>Berühmte Spieler</h2>
+      <p>Kurzprofile: Spielstil, Stärken und ikonische Momente wichtiger Spieler (z. B. Messi, Ronaldo, Haaland).</p>
+      <div class="grid">
+        <div class="cell">Messi</div>
+        <div class="cell">Ronaldo</div>
+        <div class="cell">Haaland</div>
+      </div>
+    </section>
+
+    <section class="card" aria-label="Statistiken">
+      <h2>Statistiken & Daten</h2>
+      <p>Wichtige Metriken: Expected Goals (xG), Passquote, Laufleistung — kurz erklärt und warum sie wichtig sind.</p>
+      <div style="padding:10px;border-radius:8px;border:2px solid #cde">xG • Pass % • Tackles</div>
+    </section>
+
+    <section class="card" aria-label="Interessante Themen">
+      <h2>Weitere interessante Themen</h2>
+      <ul>
+        <li>Technologie im Sport (VAR, Tracking)</li>
+        <li>Psychologie im Team</li>
+        <li>Nachwuchsförderung und Scouting</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Sami Alwazeh — Thema: Fußball & interessante Themen</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card=>{
+      card.addEventListener('click',()=>{
+        const current = getComputedStyle(card).boxSizing;
+        card.style.boxSizing = current === 'border-box' ? 'content-box' : 'border-box';
+        card.querySelector('h2').textContent = card.querySelector('h2').textContent.split(' — ')[0] + ' — ' + card.style.boxSizing;
+      });
+    });
+  </script>
+</body>
+</html>
