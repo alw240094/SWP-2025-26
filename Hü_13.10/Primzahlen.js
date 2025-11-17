@@ -26,4 +26,3 @@ function primzahlenMitWurzel(limit) {
     const primes = primzahlen(limit);
     return primes.map(p => ({ primzahl: p, wurzel: Math.sqrt(p) }));
 }
-//# sourceMappingURL=Primzahlen.js.map
