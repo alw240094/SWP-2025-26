@@ -1,0 +1,11 @@
+const persons = [
+    { name: "Sami", age: 16, gender: "m" },
+    { name: "Max", age: 22, gender: "m" },
+    { name: "Lisa", age: 14, gender: "f" },
+    { name: "Anna", age: 32, gender: "f" },
+    { name: "Tom", age: 45, gender: "m" }
+];
+
+const alter_sort = persons.sort((person1, person2) => person1.age - person2.age);
+
+const nur_maenner = persons.filter(person => person.gender == "m");
